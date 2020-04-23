@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200424 00:46:09.555" rpa="false">
+<suite id="s1" name="Login" source="C:\Users\Warpath\PycharmProjects\RobotFramework\venv\Robot\login.robot">
+<test id="s1-t1" name="Valid Login">
+<kw name="Open main page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200424 00:46:09.920" level="INFO">Opening browser 'Chrome' to base url 'https://www.phptravels.net/login'.</msg>
+<status status="PASS" starttime="20200424 00:46:09.919" endtime="20200424 00:46:17.219"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200424 00:46:17.227" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20200424 00:46:17.219" endtime="20200424 00:46:17.228"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:09.919" endtime="20200424 00:46:17.228"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=username</arg>
+<arg>user@phptravels.com</arg>
+</arguments>
+<msg timestamp="20200424 00:46:17.230" level="INFO">Typing text 'user@phptravels.com' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20200424 00:46:17.229" endtime="20200424 00:46:17.533"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:17.229" endtime="20200424 00:46:17.533"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>demouser</arg>
+</arguments>
+<msg timestamp="20200424 00:46:17.534" level="INFO">Typing text 'demouser' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20200424 00:46:17.534" endtime="20200424 00:46:17.755"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:17.534" endtime="20200424 00:46:17.755"></status>
+</kw>
+<kw name="Login button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=loginbtn</arg>
+</arguments>
+<msg timestamp="20200424 00:46:17.757" level="INFO">Clicking element 'class=loginbtn'.</msg>
+<status status="PASS" starttime="20200424 00:46:17.756" endtime="20200424 00:46:17.908"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:17.755" endtime="20200424 00:46:17.909"></status>
+</kw>
+<kw name="Assert Demo User">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=text-align-left</arg>
+</arguments>
+<status status="PASS" starttime="20200424 00:46:17.910" endtime="20200424 00:46:20.349"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Account</arg>
+</arguments>
+<msg timestamp="20200424 00:46:20.356" level="INFO">Page title is 'My Account'.</msg>
+<status status="PASS" starttime="20200424 00:46:20.350" endtime="20200424 00:46:20.356"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:17.910" endtime="20200424 00:46:20.357"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200424 00:46:20.357" endtime="20200424 00:46:22.505"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:09.917" endtime="20200424 00:46:22.505" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Invalid Login">
+<kw name="Open main page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200424 00:46:22.510" level="INFO">Opening browser 'Chrome' to base url 'https://www.phptravels.net/login'.</msg>
+<status status="PASS" starttime="20200424 00:46:22.510" endtime="20200424 00:46:29.291"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200424 00:46:29.300" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20200424 00:46:29.292" endtime="20200424 00:46:29.301"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:22.509" endtime="20200424 00:46:29.301"></status>
+</kw>
+<kw name="Input invalid login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=username</arg>
+<arg>user@phptravels.co</arg>
+</arguments>
+<msg timestamp="20200424 00:46:29.303" level="INFO">Typing text 'user@phptravels.co' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20200424 00:46:29.303" endtime="20200424 00:46:29.581"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:29.302" endtime="20200424 00:46:29.581"></status>
+</kw>
+<kw name="Input invalid password">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>demouse</arg>
+</arguments>
+<msg timestamp="20200424 00:46:29.583" level="INFO">Typing text 'demouse' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20200424 00:46:29.583" endtime="20200424 00:46:29.807"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:29.582" endtime="20200424 00:46:29.808"></status>
+</kw>
+<kw name="Login button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=loginbtn</arg>
+</arguments>
+<msg timestamp="20200424 00:46:29.810" level="INFO">Clicking element 'class=loginbtn'.</msg>
+<status status="PASS" starttime="20200424 00:46:29.809" endtime="20200424 00:46:29.949"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:29.808" endtime="20200424 00:46:29.949"></status>
+</kw>
+<kw name="Assert invalid">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=resultlogin</arg>
+</arguments>
+<status status="PASS" starttime="20200424 00:46:29.951" endtime="20200424 00:46:30.681"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=resultlogin</arg>
+</arguments>
+<status status="PASS" starttime="20200424 00:46:30.681" endtime="20200424 00:46:30.714"></status>
+</kw>
+<kw name="Should Contain Any" library="BuiltIn">
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<arguments>
+<arg>${list}</arg>
+<arg>Invalid Email or Password</arg>
+</arguments>
+<status status="PASS" starttime="20200424 00:46:30.714" endtime="20200424 00:46:30.715"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:29.950" endtime="20200424 00:46:30.715"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200424 00:46:30.716" endtime="20200424 00:46:32.838"></status>
+</kw>
+<status status="PASS" starttime="20200424 00:46:22.507" endtime="20200424 00:46:32.838" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200424 00:46:09.558" endtime="20200424 00:46:32.841"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
